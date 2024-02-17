@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Minifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #217dbb;
+        }
+    </style>
+</head>
+<body>
+    <h1>URL Minifier </h1>
+
+    <hr>
+    <p>(Enter website URL without https:// for e.g www.moezin.tech)</p>
+    <div class="content">
+        <form method="post" action="/post/">
+            <p>
+                <input type="text" name="url_from_user" placeholder="Enter URL">
+            </p>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
