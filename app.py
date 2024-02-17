@@ -2,11 +2,16 @@ from flask import Flask,render_template,jsonify,redirect,request
 from pymongo import MongoClient
 import urllib.parse
 import random
+from dotenv import load_dotenv
+import os
 app = Flask(__name__)
-
+load_dotenv()
 def connect_to_mongodb():
    try:
-     client = MongoClient("mongodb+srv://moizahsan07:" + urllib.parse.quote("XYIjYaim5k5zaCpH") + "@urlminifier.cqmynvl.mongodb.net/?retryWrites=true&w=majority")
+     uri_name = os.getenv("uri_name")
+     uri_pass = os.getenv("uri_pass")
+     project_details = os.getenv("project_details")
+     client = MongoClient(uri_name + urllib.parse.quote(uri_pass) + project_details)
      print("Connected To MongoDB client successfully")
 
      return client
